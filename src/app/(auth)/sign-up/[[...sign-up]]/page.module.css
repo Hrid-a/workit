@@ -1,0 +1,9 @@
+.wrapper {
+    width: 100%;
+    max-width: var(--max-width-content);
+    padding: 16px 20px;
+    margin: 0 auto;
+
+    display: grid;
+    place-items: center;
+}

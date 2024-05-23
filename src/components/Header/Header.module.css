@@ -1,0 +1,33 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width-content);
+    display: flex;
+    gap: 14px;
+    align-items: center;
+
+    margin: 0 auto;
+    padding-block: 32px;
+    padding-inline: 16px;
+
+    @media screen and (min-width:40rem) {
+        padding-inline: 39px;
+    }
+
+    @media screen and (min-width: 65rem) {
+        padding-block: 56px;
+    }
+}
+
+.btn {
+    color: var(--color-white);
+    border-color: transparent;
+    border-bottom: 1px solid var(--color-primary);
+    transition: color 450ms ease-out;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn:hover {
+    color: var(--color-primary);
+}

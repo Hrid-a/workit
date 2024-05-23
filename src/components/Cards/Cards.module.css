@@ -1,0 +1,75 @@
+.wrapper {
+
+    background-color: var(--color-white);
+    padding-block: 10px;
+}
+
+/* '#f4f4f5', '#e4e4e7', '#f4f4f5'); */
+/* p {
+    color: #f4f4f5;
+} */
+
+.content {
+    width: 100%;
+    max-width: var(--max-width-content);
+    padding: 20px 18px;
+    margin: 50px auto;
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width:60rem) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+.content article {
+    padding: 20px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--color-gray-400);
+    background: linear-gradient(to bottom,
+            hsl(240, 4.76%, 95.88%) 0%,
+            hsl(240, 4.76%, 95.88%) 8.1%,
+            hsl(240, 4.35%, 95.49%) 15.5%,
+            hsl(240, 8.33%, 95.29%) 22.5%,
+            hsl(240, 7.69%, 94.9%) 29%,
+            hsl(240, 3.45%, 94.31%) 35.3%,
+            hsl(240, 6.25%, 93.73%) 41.2%,
+            hsl(240, 5.88%, 93.33%) 47.1%,
+            hsl(240, 5.26%, 92.55%) 52.9%,
+            hsl(240, 5%, 92.16%) 58.8%,
+            hsl(240, 6.98%, 91.57%) 64.7%,
+            hsl(240, 4.35%, 90.98%) 71%,
+            hsl(240, 4.17%, 90.59%) 77.5%,
+            hsl(240, 6.12%, 90.39%) 84.5%,
+            hsl(240, 5.88%, 90%) 91.9%,
+            hsl(240, 5.88%, 90%) 100%);
+}
+
+
+
+.content h2 {
+    margin: 0;
+}
+
+@media screen and (min-width: 60rem) {
+
+    .content article:nth-child(1),
+    .content article:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .content article:nth-child(2),
+    .content article:nth-child(5) {
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
+
+    .content article:nth-child(3) {
+        grid-column-start: 7;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+}

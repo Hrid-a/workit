@@ -1,0 +1,12 @@
+.wrapper {
+    background-color: var(--color-white);
+}
+
+.footer {
+    width: 100%;
+    max-width: var(--max-width-color);
+    margin: 0 auto;
+    padding: 20px 16px 50px;
+    display: grid;
+    place-items: center;
+}
