@@ -1,5 +1,5 @@
 
-import { Cards } from "@/components/Cards";
+import  Cards  from "@/components/Cards";
 import styles from "./page.module.css";
 import Decoration from "@/components/Decoration";
 import Features from "@/components/Features";

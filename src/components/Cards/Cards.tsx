@@ -4,46 +4,47 @@ export type FeatureCardProps = {
   emoji: string;
   title: string;
   paragraph: string;
-  useHtml?:boolean;
+  useHtml?: boolean;
 
 };
 
 import styles from './Cards.module.css';
 import { features } from '../../helpers/constant';
 
-export const Cards = () => {
+const Cards = () => {
   return (
     <div className={styles.wrapper}>
-  
-    <section
-      className={styles.content}
-    >
-    {
-    
-    features.map(({title, emoji, paragraph, useHtml}:FeatureCardProps) => (
-      <article
-      key={title}
-    >
-      <h2 className="">
-      <span role="img" aria-label="chart increasing">{emoji}
-    </span>
-        </h2>
-      <h2 className="py-4 text-2xl font-extrabold">{title}</h2>
-      <div className="text-sm leading-6">
+      <section
+        className={styles.content}
+      >
         {
-          !!useHtml ? (<p dangerouslySetInnerHTML={{ __html: paragraph }}/>)
-          :
-          (<p>
-        {paragraph}
-        </p>)
-        }
-        </div>
-        
-    </article>
-    ))}
-    </section>
+          features.map(({ title, emoji, paragraph, useHtml }: FeatureCardProps) => (
+            <article
+              key={title}
+            >
+              <h2 className="">
+                <span role="img" aria-label="chart increasing">{emoji}
+                </span>
+              </h2>
+              <h2 className="py-4 text-2xl font-extrabold">{title}</h2>
+              <div className="text-sm leading-6">
+              <p dangerouslySetInnerHTML={{ __html: paragraph }} />
+                {/* {
+                  !!useHtml ? (<p dangerouslySetInnerHTML={{ __html: paragraph }} />)
+                    :
+                    (<p>
+                      {paragraph}
+                    </p>) /
+        } */}
+              </div>
 
-       </div> 
+            </article>
+          ))}
+      </section>
+
+    </div>
   );
-
 };
+
+
+export default Cards;
