@@ -1,27 +1,13 @@
 import React from 'react';
-import {
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+
 
 import styles from './Header.module.css';
 import Logo from '../Logo';
 
-function Header() {
+function Header({children}: {children:React.ReactNode}) {
   return <header className={styles.wrapper}>
     <Logo fillColor='white'/>
-    <SignedOut>
-          <SignInButton>
-          <button className={styles.btn}>
-      Apply for access
-    </button>
-          </SignInButton>
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
+    {children}
   </header>;
 }
 

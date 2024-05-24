@@ -1,0 +1,27 @@
+.wrapper {
+    border: 1px solid red;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+    &> :first-child {
+        margin: 30px 16px;
+    }
+}
+
+.navigation {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigation li {
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 25px;
+}

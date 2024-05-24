@@ -1,0 +1,41 @@
+.wrapper {
+    display: block;
+    position: relative;
+    font: inherit;
+    text-transform: capitalize;
+    /*
+        this overflow for decoration purposes
+    */
+
+    overflow: hidden;
+}
+
+.wrapper span {
+    display: block;
+    transform: translateY(var(--translate-from));
+    transition: transform 250ms ease-out;
+    will-change: transform;
+}
+
+
+.wrapper .mainText {
+    --translate-from: 0%;
+    --translate-to: -100%;
+}
+
+.wrapper .hoverText {
+    --translate-from: 100%;
+    --translate-to: 0%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+.wrapper:hover span {
+    transform: translateY(var(--translate-to));
+    transition: transform ease-in 250ms;
+}

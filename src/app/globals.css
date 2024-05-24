@@ -81,6 +81,15 @@ break points 65rem , 45rem
 
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 body {
   position: relative;
   font-family: var(--font-family);
@@ -137,4 +146,24 @@ p {
   h3 {
     font-size: 1.75rem;
   }
+}
+
+.btn {
+  color: var(--color-white);
+  border-color: transparent;
+  border-bottom: 1px solid var(--color-primary);
+  transition: color 450ms ease-out;
+  cursor: pointer;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.btn:hover {
+  color: var(--color-primary);
+}
+
+.dashboard__wrraper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
 }
