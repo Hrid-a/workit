@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { Fraunces } from "next/font/google";
 import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
   ClerkProvider,
 } from '@clerk/nextjs'
 
 import "./globals.css";
 import Header from "@/components/Header";
+import Link from "next/link";
 
 const mainFont = Fraunces({
   subsets: ['latin'],
@@ -28,10 +33,20 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className={mainFont.variable}>
-        <Header />
-        <main>
+        <Header>
+        <SignedOut>
+          <SignInButton>
+          <button className='btn'>
+            Apply for access
+        </button>
+          </SignInButton>
+    </SignedOut>
+        <SignedIn>
+          <Link className="btn" prefetch={true} href='/dashboard'>Dashboard</Link>
+          <UserButton />
+        </SignedIn>
+        </Header>
         {children}
-        </main>
         </body>
     </html>
     </ClerkProvider>
