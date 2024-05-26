@@ -46,9 +46,7 @@ export default function RootLayout({
           <UserButton />
         </SignedIn>
         </Header>
-        <main>
         {children}
-        </main>
         </body>
     </html>
     </ClerkProvider>

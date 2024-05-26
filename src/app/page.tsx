@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <section className={styles.wrapper}>
       <h1 className={styles.heading}>
         app <span>Tailored</span> to <br />
@@ -19,6 +19,6 @@ export default function Home() {
       <Features/>
       <Cards />
       <Footer />
-    </>
+    </main>
   );
 }

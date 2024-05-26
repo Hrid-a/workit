@@ -1,17 +1,15 @@
-import Home from '@/app/page';
-import { BookCheck, File, FileVideo, LayoutDashboard } from 'lucide';
-import React from 'react';
+import dynamic from 'next/dynamic'
+import { LucideProps } from 'lucide-react';
+import dynamicIconImports from 'lucide-react/dynamicIconImports';
 
-const ICONS = {
-  dashboard: LayoutDashboard,
-  pdfs: File,
-  videos: FileVideo,
-  quizzes: BookCheck
+export interface IconProps extends LucideProps {
+  name: keyof typeof dynamicIconImports;
 }
 
-function Icon({icon}:{icon:string}) {
-  return <div>
-  </div>;
-}
+const Icon = ({ name, ...props }: IconProps) => {
+  const LucideIcon = dynamic(dynamicIconImports[name])
+
+  return <LucideIcon {...props} />;
+};
 
 export default Icon;

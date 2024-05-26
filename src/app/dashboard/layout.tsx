@@ -5,8 +5,8 @@ import Navigation from '@/components/Navigation'
 
 const Rootlayout = ({children}: {children: React.ReactNode}) => {
   return (
-    <html lang="en">
-      <body style={{backgroundColor: 'var(--color-white)'}}>
+    // <html lang="en">
+      // <body style={{backgroundColor: 'var(--color-white)'}}>
         <div className='dashboard__wrraper'>
           <aside>
             <Navigation />
@@ -15,8 +15,8 @@ const Rootlayout = ({children}: {children: React.ReactNode}) => {
             {children}
           </main>
         </div>
-      </body>
-    </html>
+      // </body>
+    // </html>
   )
 }
 
