@@ -1,0 +1,15 @@
+.wrapper {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin: 40px auto -30px;
+}
+
+.heading {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+}
+
+.description {
+    margin-bottom: 0px;
+}

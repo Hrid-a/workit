@@ -1,23 +1,35 @@
-import React from 'react'
+"use client";
+import { usePathname } from "next/navigation";
+import React from "react";
 
-import Navigation from '@/components/Navigation'
-
-
-const Rootlayout = ({children}: {children: React.ReactNode}) => {
+const Dashboard = ({
+  children,
+  pdfs,
+  quizzes,
+}: {
+  children: React.ReactNode;
+  pdfs: React.ReactNode;
+  quizzes: React.ReactNode;
+}) => {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
-    // <html lang="en">
-      // <body style={{backgroundColor: 'var(--color-white)'}}>
-        <div className='dashboard__wrraper'>
-          <aside>
-            <Navigation />
-          </aside>
-          <main>
+    <div className="dashboard__wrraper">
+      <main>
+        {pathname === "/dashboard" ? (
+          <>
             {children}
-          </main>
-        </div>
-      // </body>
-    // </html>
-  )
-}
+            <div className="content">
+              {pdfs}
+              {quizzes}
+            </div>
+          </>
+        ) : (
+          <>{children}</>
+        )}
+      </main>
+    </div>
+  );
+};
 
-export default Rootlayout
+export default Dashboard;

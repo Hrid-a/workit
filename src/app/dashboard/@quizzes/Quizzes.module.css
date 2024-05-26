@@ -1,0 +1,15 @@
+.wrapper {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 20px;
+    min-height: 200px;
+}

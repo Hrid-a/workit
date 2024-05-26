@@ -1,0 +1,38 @@
+.wrapper {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    text-transform: capitalize;
+}
+
+.header h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.btn {
+    color: var(--color-secondary);
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    color: var(--color-secondary);
+}
+
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-block: 20px;
+    min-height: 150px;
+}
