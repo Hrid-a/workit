@@ -12,7 +12,6 @@ const Dashboard = ({
   quizzes: React.ReactNode;
 }) => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div className="dashboard__wrraper">
       <main>

@@ -1,0 +1,39 @@
+.wrapper {
+    position: relative;
+}
+
+/* fixed inset-0 flex w-screen items-center justify-center p-4 */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: hsla(0deg 0% 0% / 0.6);
+}
+
+/* max-w-lg space-y-4 border bg-white p-12 */
+.panel {
+    width: min(600px, 100%);
+    padding: 24px;
+    margin-block: 16px;
+    border: 1px solid var(--color-gray-600);
+    border-radius: 10px;
+    background-color: white;
+    text-transform: capitalize;
+
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+.close {
+    color: var(--color-secondary);
+    margin-left: auto;
+    cursor: pointer;
+    transform: translate(60%, -50%);
+}
