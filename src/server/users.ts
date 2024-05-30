@@ -3,14 +3,12 @@ import { auth } from '@clerk/nextjs/server';
 import 'server-only';
 
 export const getUserByClerkId = async () => {
-    const {userId} = await auth();
+    const {userId} =  auth();
     if(!userId) return;
-    
-    const user = await prisma.user.findUniqueOrThrow({
+    const user = await prisma.user.findUnique({
         where:{
             clerkId: userId
         }
     })
-
     return user;
 }

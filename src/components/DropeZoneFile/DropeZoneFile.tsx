@@ -2,13 +2,18 @@ import * as React from "react";
 import Dropzone from "react-dropzone";
 
 import styles from "./DropZoneFile.module.css";
+import { useUploadThing } from "@/helpers/uploadthing";
 
 function DropeZoneFile() {
- 
-
+  const { startUpload } = useUploadThing("pdfUploader");
   return (
-    <Dropzone onDrop={(acceptedFiles)=>console.log(acceptedFiles)}
-    accept={{'application/pdf': [] }}
+    <Dropzone
+      multiple={false}
+      onDrop={async (acceptedFile) => {
+        const res = await startUpload(acceptedFile);
+        console.log(res);
+      }}
+      accept={{ "application/pdf": [] }}
     >
       {({ getRootProps, getInputProps }) => (
         <section className={styles.wrapper}>

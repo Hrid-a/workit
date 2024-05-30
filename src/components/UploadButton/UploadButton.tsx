@@ -5,7 +5,7 @@ import styles from "./UploadButton.module.css";
 import Modal from "../Modal";
 import DropeZoneFile from "../DropeZoneFile";
 
-function UploadButton() {
+const UploadButton = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   return (
     <div>
@@ -19,6 +19,6 @@ function UploadButton() {
       ) : null}
     </div>
   );
-}
+};
 
 export default UploadButton;

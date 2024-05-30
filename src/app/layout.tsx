@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Fraunces, Redacted_Script } from "next/font/google";
 import {
   SignInButton,
   SignedIn,
@@ -7,6 +7,7 @@ import {
   UserButton,
   ClerkProvider,
 } from "@clerk/nextjs";
+import clsx from "clsx";
 
 import "./globals.css";
 import Header from "@/components/Header";
@@ -17,6 +18,13 @@ const mainFont = Fraunces({
   display: "fallback",
   weight: "variable",
   variable: "--font-family",
+});
+
+const loadingFont = Redacted_Script({
+  weight: ["400"],
+  display: "fallback",
+  subsets: ["latin"],
+  variable: "--font-family-loading",
 });
 
 export const metadata: Metadata = {
@@ -31,12 +39,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      signInFallbackRedirectUrl="/dashboard"
-      signUpFallbackRedirectUrl="/sign-in"
-    >
+    <ClerkProvider>
       <html lang="en">
-        <body className={mainFont.variable}>
+        <body className={clsx(mainFont.variable, loadingFont.variable)}>
           <Header>
             <SignedOut>
               <SignInButton>
