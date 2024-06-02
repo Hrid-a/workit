@@ -26,7 +26,7 @@ function PdfComponent({
   };
   return (
     <Link
-      href={`/pdfs/${id}`}
+      href={`/dashboard/${id}`}
       style={{
         fontFamily: isPlaceholder ? "var(--font-family-loading)" : undefined,
       }}
