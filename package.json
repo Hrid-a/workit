@@ -17,6 +17,8 @@
     "@langchain/pinecone": "^0.0.7",
     "@pinecone-database/pinecone": "^2.2.1",
     "@prisma/client": "^5.14.0",
+    "@react-pdf/renderer": "^3.4.4",
+    "@simplepdf/react-embed-pdf": "^1.7.1",
     "@uploadthing/react": "^6.6.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
@@ -26,9 +28,11 @@
     "next": "14.2.3",
     "openai": "^4.47.1",
     "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^4.3.136",
     "react": "^18",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
+    "react-pdf": "^9.0.0",
     "uploadthing": "^6.12.0"
   },
   "devDependencies": {

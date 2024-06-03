@@ -29,13 +29,13 @@ export const ourFileRouter = {
         const newFile = await prisma.file.create({
             data: {
                 name: file.name,
-                url: `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`,
+                url: file.url,
                 key: file.key,
                 userId: metadata.userId
             }
         })
         try {
-            const res = await fetch(`https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`);
+            const res = await fetch(file.url);
             const blob = await res.blob();
             const loader = new PDFLoader(blob);
 
